@@ -6,13 +6,13 @@ Part 1: Identify Classes
    Explanation: Represents individual books in the library collection. Needed to store book-specific information like title, author, ISBN, and availability status.
 
 2. Member
-   Explanation: Represents library members who can borrow books. Needed to track member information and their borrowed books.
+   Explanation: Depicts library members who can borrow books. Needed to track member information and their borrowed books.
 
 3. Librarian
-   Explanation: Represents library staff who manage the collection. Needed to handle administrative tasks like adding/removing books and viewing system status.
+   Explanation: Symbolizes library staff who manage the collection. This is required to handle administrative tasks like adding/removing books and viewing system status.
 
 4. Library
-   Explanation: Represents the main system that manages the entire collection. Needed to coordinate interactions between books, members, and librarians.
+   Explanation: Represents the main system that manages the entire collection. This is required to coordinate interactions between books, members, and librarians.
 
 Part 2: Define Responsibilities 
 
