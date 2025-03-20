@@ -1,0 +1,64 @@
+Library System CRC Cards
+
+Part 1: Identify Classes 
+
+1. Book
+   Explanation: Represents individual books in the library collection. Needed to store book-specific information like title, author, ISBN, and availability status.
+
+2. Member
+   Explanation: Represents library members who can borrow books. Needed to track member information and their borrowed books.
+
+3. Librarian
+   Explanation: Represents library staff who manage the collection. Needed to handle administrative tasks like adding/removing books and viewing system status.
+
+4. Library
+   Explanation: Represents the main system that manages the entire collection. Needed to coordinate interactions between books, members, and librarians.
+
+Part 2: Define Responsibilities 
+
+1. Book Class
+   - Store and provide access to book information (title, author, ISBN)
+   - Track and update availability status
+
+2. Member Class
+   - Maintain list of currently borrowed books
+   - Handle borrowing and returning books
+   - Track number of books borrowed (max 3)
+
+3. Librarian Class
+   - Add and remove books from the collection
+   - View system status (available books, checked out books)
+   - Monitor member borrowing activities
+
+4. Library Class
+   - Maintain the complete collection of books
+   - Process book loans and returns
+   - Generate reports on book status and borrower information
+
+Part 3: Identify Collaborators
+
+1. Book Class
+   Collaborators:
+   - Library (to update collection status)
+   - Member (to track who has borrowed the book)
+   Explanation: Books need to interact with Library to update availability and with Member to track borrower information.
+
+2. Member Class
+   Collaborators:
+   - Book (to borrow and return)
+   - Library (to process loan requests)
+   Explanation: Members need to interact with Book objects they borrow and Library to process their requests.
+
+3. Librarian Class
+   Collaborators:
+   - Library (to manage collection)
+   - Book (to add/remove books)
+   - Member (to view borrower information)
+   Explanation: Librarians need to interact with all other classes to manage the system effectively.
+
+4. Library Class
+   Collaborators:
+   - Book (to manage collection)
+   - Member (to process loans)
+   - Librarian (to handle administrative requests)
+   Explanation: Library class acts as the central system coordinating all interactions between other classes. 
