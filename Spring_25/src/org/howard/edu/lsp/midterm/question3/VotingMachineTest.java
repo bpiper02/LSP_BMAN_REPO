@@ -8,21 +8,21 @@ public class VotingMachineTest {
         VotingMachine vm = new VotingMachine();
 
         // Adding candidates
-        vm.addCandidate("Alice");
-        vm.addCandidate("Bob");
-        vm.addCandidate("Charlie");
+        vm.addCandidate("Brent");
+        vm.addCandidate("Bernard");
+        vm.addCandidate("Biden");
 
         // Casting votes
-        vm.castVote("Alice");
-        vm.castVote("Alice");
-        vm.castVote("Bob");
-        vm.castVote("Charlie");
-        vm.castVote("Charlie");
-        vm.castVote("Charlie");
+        vm.castVote("Brent");
+        vm.castVote("Brent");
+        vm.castVote("Biden");
+        vm.castVote("Bernard");
+        vm.castVote("Bernard");
+        vm.castVote("Bernard");
 
         // Attempt to vote for a non-existent candidate
-        boolean success = vm.castVote("Eve");
-        System.out.println("Vote for Eve successful? " + success);
+        boolean success = vm.castVote("Woolfolk");
+        System.out.println("Vote for Woolfolk successful? " + success);
 
         // Displaying results
         System.out.println("Winner: " + vm.getWinner());
