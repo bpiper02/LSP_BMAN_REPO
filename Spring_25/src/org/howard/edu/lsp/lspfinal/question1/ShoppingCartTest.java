@@ -1,3 +1,7 @@
+/**
+ * References:
+ * 1. JUnit 5 User Guide - https://junit.org/junit5/docs/current/user-guide/
+
 package org.howard.edu.lsp.lspfinal.question1;
 
 import org.junit.jupiter.api.BeforeEach;
@@ -36,6 +40,26 @@ public class ShoppingCartTest {
     void testAddItemWithNegativePrice() {
         assertThrows(IllegalArgumentException.class, () -> {
             cart.addItem("Invalid Item", -10.0);
+        });
+    }
+
+    @Test
+    @DisplayName("Test for removing existing item")
+    void testRemoveExistingItem() {
+        cart.addItem("Book", 20.0);
+        cart.addItem("Pen", 5.0);
+        assertEquals(25.0, cart.getTotalCost(), 0.01);
+        
+        cart.removeItem("Book");
+        assertEquals(5.0, cart.getTotalCost(), 0.01);
+    }
+
+    @Test
+    @DisplayName("Test for removing non-existent item (expect exception)")
+    void testRemoveNonExistentItem() {
+        cart.addItem("Book", 20.0);
+        assertThrows(IllegalArgumentException.class, () -> {
+            cart.removeItem("NonExistentItem");
         });
     }
 
